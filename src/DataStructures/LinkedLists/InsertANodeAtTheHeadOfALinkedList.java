@@ -1,6 +1,8 @@
 package DataStructures.LinkedLists;
 
 /**
+ * Insert a node at the head of a linked list
+ *
  * You’re given the pointer to the head node of a linked list and an integer to add to the list.
  * Create a new node with the given integer,
  * insert this node at the head of the linked list and return the new head node.
@@ -25,4 +27,25 @@ package DataStructures.LinkedLists;
  * 2. We have a list with 1 as head, on inserting 2, 2 becomes the new head.
  */
 public class InsertANodeAtTheHeadOfALinkedList {
+    /*
+    Insert Node at the beginning of a linked list
+    head pointer input could be NULL as well for empty list
+    */
+
+    class Node{
+        int data;
+        Node next;
+    }
+
+    Node Insert(Node head, int x) {
+        Node newNode = new Node();
+        newNode.data = x;
+
+        if(head == null)
+            return newNode;
+
+        newNode.next = head;
+        head = newNode;
+        return head;
+    }
 }
