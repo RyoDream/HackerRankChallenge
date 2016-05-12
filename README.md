@@ -1,3 +1,3 @@
 # HackerRankChallenge
 
-Practise for HackerRank Challenges.a
+Practise for HackerRank Challenges.
