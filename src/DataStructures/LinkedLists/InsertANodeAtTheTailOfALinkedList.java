@@ -1,6 +1,7 @@
 package DataStructures.LinkedLists;
 
 /**
+ * Insert a Node at the Tail of a Linked List
  *
  * You are given the pointer to the head node of a linked list and an integer to add to the list.
  * Create a new node with the given integer.
