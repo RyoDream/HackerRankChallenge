@@ -54,7 +54,7 @@ public class DetectCycle {
         Node walker = head;
         Node runner = head;
 
-        while(runner != null) {
+        while(runner.next != null && runner.next.next != null ) {
             runner = runner.next.next;
             walker = walker.next;
 
