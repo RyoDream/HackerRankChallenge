@@ -3,6 +3,7 @@ package Tutorials30DaysOfCode;
 import java.util.Scanner;
 
 /**
+ * Day 0: Hello, World
  * Objective
  * In this challenge, we review some basic concepts that will get you started with this series.
  * Check out the Tutorial tab for learning materials and an instructional video!
