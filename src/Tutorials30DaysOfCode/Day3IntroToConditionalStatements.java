@@ -35,7 +35,7 @@ import java.util.Scanner;
  * Weird
  *
  * Sample Input 1
- * 24
+ * 24w
  *
  * Sample Output 1
  * Not Weird
