@@ -1,5 +1,7 @@
 package Java.DataStructure;
 
+import java.util.Scanner;
+
 /**
  * You are playing a game on your cellphone.
  * You are given an array of length n, indexed from 0 to n-1.
@@ -55,4 +57,35 @@ package Java.DataStructure;
  * In the fourth case, jump length is 1, so it doesn't matter if you jump or walk, you can't reach the end.
  */
 public class Java1DArray_Part2 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+
+        while(T-- > 0) {
+            int n = sc.nextInt();
+            int m = sc.nextInt();
+            int[] arr = new int[n];
+
+            for(int i=0;i<n;i++)
+                arr[i] = sc.nextInt();
+
+            if(isSolveable(m, arr, 0))
+                System.out.println("YES");
+            else
+                System.out.println("NO");
+        }
+    }
+
+    private static boolean isSolveable(int m, int[] arr, int i) {
+        if(i < 0 || arr[i] == 1)
+            return false;
+
+        if((i==arr.length -1) || i+m > arr.length -1)
+            return true;
+
+        arr[i] = 1;
+        return isSolveable(m, arr, i+1) || isSolveable(m, arr, i-1) || isSolveable(m, arr, i+m);
+    }
+
 }
