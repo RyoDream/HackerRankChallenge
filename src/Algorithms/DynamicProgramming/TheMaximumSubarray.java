@@ -65,7 +65,7 @@ public class TheMaximumSubarray {
                 i++;
             }
 
-            findMaxSum(array);
+            findMaxSum2(array);
         }
     }
 
@@ -91,6 +91,32 @@ public class TheMaximumSubarray {
         }
 
         System.out.println(max_so_far+" "+sum);
+    }
+
+    public static void findMaxSum2(int[] array) {
+        int max = array[0];
+        int[] maxSum = new int[array.length];
+        maxSum[0] = array[0];
+        for(int i=1;i<array.length;i++) {
+            maxSum[i] = Math.max(maxSum[i-1]+array[i], array[i]);
+            if(maxSum[i] > max)
+                max = maxSum[i];
+        }
+
+
+        Arrays.sort(array);
+        int sum = 0;
+        if(array[array.length-1] <= 0)
+            sum = array[array.length-1];
+        else {
+            int i = array.length-1;
+            while(i>=0 && array[i]>0) {
+                sum+=array[i];
+                i--;
+            }
+        }
+
+        System.out.println(max+" "+sum);
     }
 
 }
