@@ -1,6 +1,5 @@
 package CrackingTheCodeInterview;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
