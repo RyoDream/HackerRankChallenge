@@ -1,9 +1,6 @@
 package WeeklyChallenges;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
